@@ -1,0 +1,14 @@
+.body{
+	margin:auto;
+}
+
+.mycontent{
+	position: absolute;
+	top: 50px;
+	width: 100%;
+}
+
+.jumbotron{
+	background-image: url('../image/img1.jpg');
+
+}
