@@ -8,7 +8,11 @@ soup = BeautifulSoup(htmltext, from_encoding="utf-8")
 authors = []
 
 for tag in soup.select(".popular"):
-	authors.append(tag.title)
+	authors.append(tag.a.get_text())
+
+
+for tag in soup.select("dl"):
+	authors.append(tag.a.get_text())
 
 for author in authors:
 	print author.encode('utf-8')
