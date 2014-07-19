@@ -62,7 +62,7 @@ while True :
 	soup = BeautifulSoup(htmltext, from_encoding="utf-8")
 
 	mylists = []
-	keywords = ['건강','인디','그리드'];
+	keywords = ['cheese','window','apple']
 
 	for tag in soup.select("td.title"):
 		mylists.append(tag.get_text())
@@ -73,7 +73,7 @@ while True :
 		authors.append(mylists[0])
 		str1 = ''.join(mylists)
 
-		if any(word in str1 for word in keywords) :
+		if any(word in str1 for word in keywords):
 
 			fromaddr = 'ming3772@gmail.com'
 			toaddrs  = 'ming3772@gmail.com'
@@ -94,7 +94,3 @@ while True :
 			server.quit()
 
 	time.sleep(5)
-
-
-
-
